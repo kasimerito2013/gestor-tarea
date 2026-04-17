@@ -2,29 +2,18 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class CategoriaSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
         \App\Models\Categoria::create(['nombre' => 'General']);
         \App\Models\Categoria::create(['nombre' => 'Trabajo']);
         \App\Models\Categoria::create(['nombre' => 'Hogar']);
-
-
-            $this->call([
-            CategoriaSeeder::class,
-            TareaSeeder::class,
-        ]);
     }
 }
